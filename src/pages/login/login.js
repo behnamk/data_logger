@@ -1,7 +1,10 @@
 import React, {Component} from "react";
 import user from '../image/user.svg'
 import lock from '../image/padlock.svg'
+import {BrowserRouter as Router, NavLink, Switch, Route, Link} from "react-router-dom";
 import Dashboard from "../dashboard";
+import Register from "./register";
+
 
 export class Login extends Component {
     constructor(props) {
@@ -11,8 +14,9 @@ export class Login extends Component {
         }
     }
 
-    onNavigateHome(props) {
-        this.props.history.push("/dashboard")
+    onNavigateHome() {
+        this.props.history.push("/da")
+        // alert("what is your name")
     }
 
     render() {
@@ -47,6 +51,11 @@ export class Login extends Component {
                             onClick={this.onNavigateHome} className="btn btn-primary btn-block">Submit
                     </button>
                 </form>
+                <Router>
+                    <Route exact path="/dashboard" component={Dashboard}/>
+                    <Route path="/register" component={Register}/>
+
+                </Router>
             </React.Fragment>
         )
     }
