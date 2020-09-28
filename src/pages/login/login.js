@@ -5,8 +5,7 @@ import {BrowserRouter as Router, NavLink, Switch, Route, Link} from "react-route
 import Dashboard from "../dashboard";
 import Register from "./register";
 
-
-export class Login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +14,7 @@ export class Login extends Component {
     }
 
     onNavigateHome() {
-        this.props.history.push("/da")
+        this.props.history.push("/dashboard")
         // alert("what is your name")
     }
 
@@ -52,10 +51,11 @@ export class Login extends Component {
                     </button>
                 </form>
                 <Router>
-                    <Route exact path="/dashboard" component={Dashboard}/>
+                    {/*<Route exact path="/" component={App}/>*/}
+                    <Route path="/dashboard" component={Dashboard}/>
                     <Route path="/register" component={Register}/>
-
                 </Router>
+
             </React.Fragment>
         )
     }

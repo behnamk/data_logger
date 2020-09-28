@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 class Dashboard extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
 
         }
@@ -10,8 +10,16 @@ class Dashboard extends Component {
 
     render() {
         return(
-            <div>
-                <h1>asd asd asd asd asd asd </h1>
+            <div dir="rtl" style={{padding:0, margin:0}}>
+                <div>
+                    <div>
+                        <ul className="nav nav-list">
+                            <li className="nav-header">List header</li>
+                            <li className="active"><a href="#">Home</a></li>
+                            <li><a href="#">Library</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }
