@@ -19,6 +19,7 @@ class Login extends Component {
     }
 
     render() {
+
         console.log(this.state.loggedIn)
         return (
             <React.Fragment>
