@@ -1,8 +1,8 @@
-import React,{Component} from "react";
+import React, {Component} from "react";
 import Login from "./login";
 import Register from "./register";
 
-class MainLogin extends Component{
+class MainLogin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -17,7 +17,7 @@ class MainLogin extends Component{
     };
 
     render() {
-        return(
+        return (
             <div className=" c-app c-dark-theme c-default-layout flex-row align-items-center">
                 <div className="container">
                     <div className="justify-content-center row">
@@ -27,15 +27,17 @@ class MainLogin extends Component{
                                     <div className="card-body">
                                         <div className="btn-group col-12 " style={{height: 80, padding: 0, margin: 0}}>
                                             <button type="button" className="btn btn-primary col-12"
-                                                    onClick={() => this.handlerClick('registerBtn')}>Register
+                                                    onClick={() => this.handlerClick('loginBtn')}>ورود به پنل
                                             </button>
 
                                             <button type="button" className="btn btn-primary col-12"
-                                                    onClick={() => this.handlerClick('loginBtn')}>Login
+                                                    onClick={() => this.handlerClick('registerBtn')}>ثبت نام
                                             </button>
                                         </div>
 
+                                        {/*login btn*/}
                                         {this.state.nameBtn === 'loginBtn' && <Login/>}
+                                        {/*register btn*/}
                                         {this.state.nameBtn === 'registerBtn' && <Register/>}
 
                                     </div>
@@ -45,8 +47,8 @@ class MainLogin extends Component{
                     </div>
                 </div>
             </div>
-
         )
     }
 }
+
 export default MainLogin

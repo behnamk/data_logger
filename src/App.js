@@ -4,12 +4,6 @@ import {BrowserRouter as Router, NavLink, Switch, Route, Link} from "react-route
 import Dashboard from "./pages/dashboard";
 import MainLogin from "./pages/login/mainLogin";
 
-function RouteDashboard(props) {
-    if (props){
-
-    }
-
-}
 class App extends Component {
     constructor(props) {
         super(props);
@@ -18,12 +12,10 @@ class App extends Component {
         }
     }
 
-
     render() {
         return (
             <React.Fragment>
-                {/*<MainLogin/>*/}
-                <RouteDashboard/>
+                <MainLogin/>
             </React.Fragment>
         )
     }

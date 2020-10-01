@@ -6,27 +6,32 @@ import Dashboard from "../dashboard";
 import Register from "./register";
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             loggedIn: false
         }
     }
 
-    onNavigateHome() {
-        this.props.history.push("/dashboard")
-        // alert("what is your name")
+    onNavigateHome = () => {
+        const valueResult = true
+        if (valueResult) {
+            alert('go to dashboard')
+
+        } else {
+            alert('no register')
+        }
     }
+
 
     render() {
 
-        console.log(this.state.loggedIn)
         return (
             <React.Fragment>
                 <form style={{marginTop: 40}} action="/action_page.php" className="was-validated">
                     <div className="form-group " style={{paddingRight: 40, paddingLeft: 40}}>
                         <div className="input-group mb-3">
-                            <input className="form-control" dir="rtl" type="text" placeholder="username"
+                            <input className="form-control" dir="rtl" type="text" placeholder="ایمیل"
                                    autoComplete="username"/>
                             <div className="input-group-prepend">
                                 <div className="input-group-text">
@@ -35,7 +40,7 @@ class Login extends Component {
                             </div>
                         </div>
                         <div className="input-group mb-3">
-                            <input className="form-control" dir='rtl' type="text" placeholder="username"
+                            <input className="form-control" dir='rtl' type="text" placeholder="رمز عبور"
                                    autoComplete="username"/>
                             <div className="input-group-prepend">
                                 <div className="input-group-text">
@@ -48,7 +53,7 @@ class Login extends Component {
                          style={{paddingRight: 40, paddingLeft: 40, paddingTop: 20, paddingBottom: 20}}>
                     </div>
                     <button type="submit" value={this.state.loggedIn ? <h1>salam</h1> : <h1>welcome</h1>}
-                            onClick={this.onNavigateHome} className="btn btn-primary btn-block">Submit
+                            onClick={this.onNavigateHome} className="btn btn-primary btn-block">ورود
                     </button>
                 </form>
                 <Router>
