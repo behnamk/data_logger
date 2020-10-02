@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import Login from "./login";
 import Register from "./register";
+import user from "../image/user.svg";
+import lock from "../image/padlock.svg";
+import {Switch} from "react-router-dom";
 
 class MainLogin extends Component {
     constructor(props) {
@@ -36,9 +39,90 @@ class MainLogin extends Component {
                                         </div>
 
                                         {/*login btn*/}
-                                        {this.state.nameBtn === 'loginBtn' && <Login/>}
+                                        {this.state.nameBtn === 'loginBtn' &&
+                                        <form style={{marginTop: 40}} action="/action_page.php" className="was-validated">
+                                            <div className="form-group " style={{paddingRight: 40, paddingLeft: 40}}>
+                                                <div className="input-group mb-3">
+                                                    <input className="form-control" dir="rtl" type="text" placeholder="ایمیل"
+                                                           autoComplete="username"/>
+                                                    <div className="input-group-prepend">
+                                                        <div className="input-group-text">
+                                                            <img height={20} src={user} alt='user'/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="input-group mb-3">
+                                                    <input className="form-control" dir='rtl' type="text" placeholder="رمز عبور"
+                                                           autoComplete="username"/>
+                                                    <div className="input-group-prepend">
+                                                        <div className="input-group-text">
+                                                            <img height={20} src={lock} alt='padlock'/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="form-group form-check"
+                                                 style={{paddingRight: 40, paddingLeft: 40, paddingTop: 20, paddingBottom: 20}}>
+                                            </div>
+                                            <button type="submit"
+                                                    onClick={'Dashboard'} className="btn btn-primary btn-block">ورود
+                                            </button>
+                                        </form>
+
+                                        }
                                         {/*register btn*/}
-                                        {this.state.nameBtn === 'registerBtn' && <Register/>}
+                                        {this.state.nameBtn === 'registerBtn' &&
+                                        <form style={{marginTop: 40}} action="/action_page.php" className="was-validated">
+                                            <div className="form-group " style={{paddingRight: 40, paddingLeft: 40}}>
+                                                <div className="input-group mb-3" >
+                                                    <input className="form-control" dir="rtl" type="text" placeholder="username" autoComplete="username"/>
+                                                    <div className="input-group-prepend">
+                                                        <div className="input-group-text">
+                                                            <img height={20} src={user} alt='user'/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="input-group mb-3">
+                                                    <input className="form-control" dir='rtl' type="text" placeholder="username" autoComplete="username"/>
+                                                    <div className="input-group-prepend">
+                                                        <div className="input-group-text">
+                                                            <img height={20} src={lock} alt='padlock'/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="input-group mb-3">
+                                                    <input className="form-control" dir='rtl' type="text" placeholder="username" autoComplete="username"/>
+                                                    <div className="input-group-prepend">
+                                                        <div className="input-group-text">
+                                                            <img height={20} src={lock} alt='padlock'/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="input-group mb-3">
+                                                    <input className="form-control" dir='rtl' type="text" placeholder="username" autoComplete="username"/>
+                                                    <div className="input-group-prepend">
+                                                        <div className="input-group-text">
+                                                            <img height={20} src={lock} alt='padlock'/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="input-group mb-3">
+                                                    <input className="form-control" dir='rtl' type="text" placeholder="username" autoComplete="username"/>
+                                                    <div className="input-group-prepend">
+                                                        <div className="input-group-text">
+                                                            <img height={20} src={lock} alt='padlock'/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div className="form-group form-check"
+                                                 style={{paddingRight: 40, paddingLeft: 40, paddingTop: 20, paddingBottom: 20}}>
+                                            </div>
+                                            <button type="submit" className="btn btn-primary btn-block">ایجاد</button>
+                                        </form>
+
+                                        }
 
                                     </div>
                                 </div>

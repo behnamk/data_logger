@@ -3,6 +3,7 @@ import './style.login.css';
 import {BrowserRouter as Router, NavLink, Switch, Route, Link} from "react-router-dom";
 import Dashboard from "./pages/dashboard";
 import MainLogin from "./pages/login/mainLogin";
+import Register from "./pages/login/register";
 
 class App extends Component {
     constructor(props) {
@@ -15,7 +16,12 @@ class App extends Component {
     render() {
         return (
             <React.Fragment>
-                <MainLogin/>
+                <Router>
+
+                    <Route exact path="/" component={MainLogin}/>
+                    <Route path="/dashboard" component={Dashboard}/>
+
+                </Router>
             </React.Fragment>
         )
     }
